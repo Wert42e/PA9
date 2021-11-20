@@ -23,21 +23,14 @@ int main()
 
 
 
-	sf::RenderWindow window(sf::VideoMode(500, 500), 
-		"SFML works!");
-	sf::CircleShape shape(100.f);
+	sf::RenderWindow window(sf::VideoMode(500, 500), "PA9");
 
-	shape.setFillColor(sf::Color::Green);
-	Ball gameBall(5, sf::Color::Cyan, sf::Vector2f(window.getSize().x/2, 
-		window.getSize().y / 2));
-	Paddle p1Paddle(sf::Vector2f(window.getSize().x/20, 
-		window.getSize().y / 8), sf::Color::Red, 
-		sf::Vector2f(0, 0));
-	Paddle p2Paddle(sf::Vector2f(window.getSize().x / 20,
-		window.getSize().y / 8), sf::Color::Red,
-		sf::Vector2f(window.getSize().x - p1Paddle.getSize().x,
-			0));
-	int direction = -1;
+	//sf::CircleShape shape(100.f);
+	//shape.setFillColor(sf::Color::Green);
+	//Ball gameBall(5, sf::Color::Cyan, sf::Vector2f(window.getSize().x/2, window.getSize().y / 2));
+	//Paddle p1Paddle(sf::Vector2f(window.getSize().x/20, window.getSize().y / 8), sf::Color::Red, sf::Vector2f(0, 0));
+	//Paddle p2Paddle(sf::Vector2f(window.getSize().x / 20,window.getSize().y / 8), sf::Color::Red, sf::Vector2f(window.getSize().x - p1Paddle.getSize().x, 0));
+	//int direction = -1;
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -60,11 +53,11 @@ int main()
 			//}
 		}
 
-		gameBall.move(direction * 0.01, 0);
+		//gameBall.move(direction * 0.01, 0);
 
 		// this detects a collision between
 		// the ball and p1Paddle!
-		if (gameBall.getGlobalBounds().intersects(
+		/*if (gameBall.getGlobalBounds().intersects(
 			p1Paddle.getGlobalBounds()))
 		{
 			direction *= -1;
@@ -77,13 +70,13 @@ int main()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 		{
 			p2Paddle.move(0, 0.01);
-		}
+		}*/
 
 		window.clear();
 
-		window.draw(p1Paddle);
-		window.draw(p2Paddle);
-		window.draw(gameBall);
+		//window.draw(p1Paddle);
+		//window.draw(p2Paddle);
+		//window.draw(gameBall);
 	//	window.draw(shape);
 		window.display();
 	}
