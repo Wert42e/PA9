@@ -72,6 +72,9 @@ int main()
 			p2Paddle.move(0, 0.01);
 		}*/
 
+
+
+
 		window.clear();
 
 		//window.draw(p1Paddle);
