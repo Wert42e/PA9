@@ -1,11 +1,21 @@
 #include <SFML/Graphics.hpp>
 
-class Player : public sf::Texture {
+class Player : public sf::Sprite {
 public:
-    sf::Texture texture;
-    if (!texture.loadFromFile(""))
-        return 0;
-    sf::Sprite player(texture);
-private:
-    void update
+	void update();
 };
+
+void Player::update() {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+		this->move(0, -1)
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+		this->move(0, 1)
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+		this->move(1, 0)
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+		this->move(-1, 0)
+	}
+}
