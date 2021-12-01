@@ -49,6 +49,13 @@ int main()
 	int direction = -1;
 	while (window.isOpen())
 	{
+
+		sf::Texture playertexture;
+		if (!texture.loadFromFile("images/tempPlayer.png")) {
+			return 0;
+		}
+		Player player1(playertexture);
+
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
@@ -62,11 +69,14 @@ int main()
 			//	{
 			//		p1Paddle.move(0, 1);
 			//	}
-			//	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-			//	{
-			//		p2Paddle.move(0, 1);
-			//	}
+			//////	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+			//////	{
+			//////		p2Paddle.move(0, 1);
+			//////	}
 			//}
+			if (event.type == sf::Event::KeyPressed) {
+				player1.update();
+			}
 		}
 
 		//gameBall.move(direction * 0.01, 0);
@@ -130,6 +140,9 @@ int main()
 
 
 		player.getGun().update();
+
+
+
 
 
 		window.clear();
