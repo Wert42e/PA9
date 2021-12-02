@@ -26,13 +26,13 @@
     <ClInclude Include="bullet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Gun.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

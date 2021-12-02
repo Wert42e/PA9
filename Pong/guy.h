@@ -22,7 +22,6 @@ public:
 private:
 	Gun pGun;
 
-	// double mRadius;
 };
 
 

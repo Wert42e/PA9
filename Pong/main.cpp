@@ -1,19 +1,7 @@
-// This example will use SFML libraries to implement
-// the game of Pong
+//game 
 
-// History:  11/19 - Added paddle and ball movements (so
-//                   far just down movements 's', down arrow.
-//                   Also, added
-//                   simple collision detection between
-//                   p1Paddle and the ball.
-//           11/17 - Implemented the class Ball and class Paddle.
-//                   Continued to discuss how to design around
-//                   the SFML classes.
-//           11/15 - Started declaring the Ball class.
-//           - Started from the SFML tutorial code that draws
-//                a circle in the window.
 
-#include "Header.h"
+#include "Game.h"
 
 
 
@@ -25,7 +13,7 @@ int main(void)
 	sf::Time tm; //
 
 
-	sf::RenderWindow window(sf::VideoMode(500, 500), "PA9");
+	sf::RenderWindow window(sf::VideoMode(800, 800), "PA9");
 
 	window.setVerticalSyncEnabled(true);
 
@@ -38,11 +26,6 @@ int main(void)
 	while (window.isOpen())
 	{
 
-
-		sf::Event event; //?
-		
-
-		
 		// this detects a collision between
 		// the ball and p1Paddle!
 		
