@@ -6,6 +6,7 @@
 
 
 #include "Bullet.h"
+#include "Header.h"
 
 
 class Gun

@@ -1,9 +1,14 @@
 #pragma once
 
 #include "Gun.h"
+#include "Header.h"
+
+//plant to inherat from this to create "player" and "enemy" class 
+//will contain life, points on death, could have other stuff
 
 
-class Guy : public sf::CircleShape
+class Guy : 
+	public sf::CircleShape
 {
 public:
 	Guy(const double& newRadius, const sf::Color& newColor,

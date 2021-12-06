@@ -41,6 +41,8 @@ template <class T>
 Node<T>::~Node()
 {
 	delete data;
+	
+
 }
 
 

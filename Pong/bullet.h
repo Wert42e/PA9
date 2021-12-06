@@ -1,25 +1,9 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include "Header.h"
 
 
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <vector>}
-#include <ctime>
-
-using std::getline;
-using std::ofstream;
-using std::ifstream;
-using std::fstream;
-using std::vector;
-using std::cin;
-using std::cout;
-using std::endl;
-using std::string;
-
-
-class Bullet : public sf::CircleShape
+class Bullet : 
+	public sf::CircleShape
 {
 public:
 	Bullet(const double& newRadius, const sf::Color& newColor,
